@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YUMMY SNACKS - Homemade Goodness | Musanze Rwanda</title>
+  <meta name="description" content="Artisan bakery in Musanze, Rwanda specializing in custom Wedding Cakes, Cakes, Breads, Mandazi, Sambusa & catering platters. Musanze - Inyuma ya Energy Radio. Order via 0792194867 / 0782464751.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div>📍 <strong>Musanze</strong> — Inyuma ya Energy Radio | Fresh Baked Daily</div>
+    <div class="top-bar-contact">
+      <span>📞 Call Us:</span>
+      <a href="tel:0792194867">0792194867</a>
+      <a href="tel:0782464751">0782464751</a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <div class="logo-emblem">💛</div>
+        <div class="logo-text-group">
+          <span class="logo-title">YUMMY SNACKS</span>
+          <span class="logo-subtitle">Homemade Goodness</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#menu">Products</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#categories">Inspire Me</a></li>
+        <li><a href="#customizer">Seasonal</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle-btn" onclick="toggleTheme()" title="Switch Light/Dark Mode">
+          <span id="themeIcon">☀️</span>
+          <span id="themeText">Light Mode</span>
+        </button>
+
+        <button class="cart-btn" onclick="toggleCart()">
+          🛒 Order Bag
+          <span class="cart-badge" id="cartCount">0</span>
+        </button>
+
+        <a href="https://wa.me/250792194867" target="_blank" class="btn btn-yellow">WhatsApp Order</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-badge-group">
+        <span class="hero-badge">✨ Fresh Ingredients</span>
+        <span class="hero-badge">❤️ Made with Love</span>
+        <span class="hero-badge">🏆 Great Taste</span>
+      </div>
+      <h1 class="hero-title">SWEETNESS & ARTISAN GOODNESS, <span>BAKED IN MUSANZE</span></h1>
+      <p class="hero-desc">From magnificent multi-tiered wedding cakes to golden mandazi, artisan breads, and crispy sambusa — handcrafted fresh every single day.</p>
+      <div class="hero-cta">
+        <a href="#menu" class="btn btn-yellow">EXPLORE MENU & PRODUCTS</a>
+        <a href="#customizer" class="btn btn-outline">WEDDING CAKE CONSULTATION</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Showcase Bar -->
+  <section class="section" id="categories">
+    <div class="section-header">
+      <span class="section-subtitle">OUR SPECIALTIES</span>
+      <h2 class="section-title">Fresh Baked Categories</h2>
+    </div>
+
+    <div class="category-showcase">
+      <div class="cat-card" onclick="filterCategory('wedding')">
+        <div class="cat-img-wrapper">
+          <img src="assets/hero_wedding_cake_1788261874377.png" alt="Wedding Cakes">
+        </div>
+        <div class="cat-name">Wedding Cakes</div>
+      </div>
+
+      <div class="cat-card" onclick="filterCategory('cakes')">
+        <div class="cat-img-wrapper">
+          <img src="assets/chocolate_cake_1788261898140.png" alt="Celebration Cakes">
+        </div>
+        <div class="cat-name">Cakes</div>
+      </div>
+
+      <div class="cat-card" onclick="filterCategory('bread')">
+        <div class="cat-img-wrapper">
+          <img src="assets/artisan_bread_1788261922619.png" alt="Artisan Breads">
+        </div>
+        <div class="cat-name">Bread</div>
+      </div>
+
+      <div class="cat-card" onclick="filterCategory('mandazi')">
+        <div class="cat-img-wrapper">
+          <img src="assets/golden_mandazi_1788261945527.png" alt="Golden Mandazi">
+        </div>
+        <div class="cat-name">Mandazi</div>
+      </div>
+
+      <div class="cat-card" onclick="filterCategory('sambusa')">
+        <div class="cat-img-wrapper">
+          <img src="assets/crispy_sambusa_1788261967770.png" alt="Crispy Sambusa">
+        </div>
+        <div class="cat-name">Sambusa</div>
+      </div>
+
+      <div class="cat-card" onclick="filterCategory('platters')">
+        <div class="cat-img-wrapper">
+          <img src="assets/baker_craft_1788261990529.png" alt="Event Platters">
+        </div>
+        <div class="cat-name">Event Platters</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filterable Product Grid -->
+  <section class="section" id="menu">
+    <div class="section-header">
+      <span class="section-subtitle">OUR CUSTOMERS LOVE</span>
+      <h2 class="section-title">Most Ordered This Month</h2>
+    </div>
+
+    <div class="filter-tabs">
+      <button class="tab-btn active" onclick="filterCategory('all', this)">All Snacks & Cakes</button>
+      <button class="tab-btn" onclick="filterCategory('wedding', this)">Wedding Cakes</button>
+      <button class="tab-btn" onclick="filterCategory('cakes', this)">Celebration Cakes</button>
+      <button class="tab-btn" onclick="filterCategory('bread', this)">Fresh Breads</button>
+      <button class="tab-btn" onclick="filterCategory('mandazi', this)">Golden Mandazi</button>
+      <button class="tab-btn" onclick="filterCategory('sambusa', this)">Sambusa & Snacks</button>
+    </div>
+
+    <div class="product-grid" id="productGrid">
+      <!-- Product 1 -->
+      <div class="product-card" data-category="wedding">
+        <img src="assets/hero_wedding_cake_1788261874377.png" class="product-img" alt="Royal Wedding Cake">
+        <div class="product-body">
+          <span class="product-tag">Wedding Cake</span>
+          <h3 class="product-title">Three-Tier Ivory & Gold Luxury Cake</h3>
+          <p class="product-desc">Serves 80–120 guests. Custom sugar roses, gold leaf detailing, and your choice of vanilla & chocolate tiers.</p>
+          <div class="product-footer">
+            <span class="product-price">140,000 RWF</span>
+            <button class="btn btn-yellow" onclick="addToCart('Three-Tier Ivory & Gold Cake', 140000)">+ Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card" data-category="cakes">
+        <img src="assets/chocolate_cake_1788261898140.png" class="product-img" alt="Chocolate Fudge Cake">
+        <div class="product-body">
+          <span class="product-tag">Birthday / Celebration</span>
+          <h3 class="product-title">Belgian Chocolate Fudge Ganache Cake</h3>
+          <p class="product-desc">Rich cocoa layers with silky drip ganache frosting. 20cm round, 12 generous slices.</p>
+          <div class="product-footer">
+            <span class="product-price">22,000 RWF</span>
+            <button class="btn btn-yellow" onclick="addToCart('Chocolate Fudge Ganache Cake', 22000)">+ Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card" data-category="bread">
+        <img src="assets/artisan_bread_1788261922619.png" class="product-img" alt="Artisan Bread Loaves">
+        <div class="product-body">
+          <span class="product-tag">Fresh Bakery</span>
+          <h3 class="product-title">Homestyle Honey Wheat Loaf (Pack of 2)</h3>
+          <p class="product-desc">Golden crust, soft interior baked with pure honey and local butter. Perfect for breakfast.</p>
+          <div class="product-footer">
+            <span class="product-price">3,500 RWF</span>
+            <button class="btn btn-yellow" onclick="addToCart('Honey Wheat Loaf (Pack of 2)', 3500)">+ Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card" data-category="mandazi">
+        <img src="assets/golden_mandazi_1788261945527.png" class="product-img" alt="Golden Mandazi">
+        <div class="product-body">
+          <span class="product-tag">Snacks & Tea Time</span>
+          <h3 class="product-title">Golden Cardamom Mandazi (Dozen of 12)</h3>
+          <p class="product-desc">Lightly sweet, fluffy, fried fresh every morning with warm cardamom & coconut notes.</p>
+          <div class="product-footer">
+            <span class="product-price">3,000 RWF</span>
+            <button class="btn btn-yellow" onclick="addToCart('Cardamom Mandazi (Dozen)', 3000)">+ Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-card" data-category="sambusa">
+        <img src="assets/crispy_sambusa_1788261967770.png" class="product-img" alt="Crispy Beef Sambusa">
+        <div class="product-body">
+          <span class="product-tag">Savory Snacks</span>
+          <h3 class="product-title">Crispy Beef & Herb Sambusa (Pack of 10)</h3>
+          <p class="product-desc">Thin crispy pastry filled with seasoned minced beef, scallions, and fragrant spices.</p>
+          <div class="product-footer">
+            <span class="product-price">5,000 RWF</span>
+            <button class="btn btn-yellow" onclick="addToCart('Crispy Beef Sambusa (Pack of 10)', 5000)">+ Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card" data-category="platters">
+        <img src="assets/baker_craft_1788261990529.png" class="product-img" alt="Event Snack Platter">
+        <div class="product-body">
+          <span class="product-tag">Catering & Events</span>
+          <h3 class="product-title">Grand Musanze Snack & Pastry Platter</h3>
+          <p class="product-desc">Feeds 20 guests. Includes 15 Mandazi, 15 Sambusa, mini cake bites, and savory pastries.</p>
+          <div class="product-footer">
+            <span class="product-price">35,000 RWF</span>
+            <button class="btn btn-yellow" onclick="addToCart('Grand Snack Platter (20 guests)', 35000)">+ Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Wedding Cake Customizer -->
+  <section class="section" id="customizer">
+    <div class="section-header">
+      <span class="section-subtitle">WEDDING CAKE CONSULTATION</span>
+      <h2 class="section-title">Customize Your Dream Wedding Cake</h2>
+    </div>
+
+    <div class="customizer-box">
+      <div class="customizer-preview">
+        <img src="assets/hero_wedding_cake_1788261874377.png" alt="Custom Wedding Cake Preview">
+        <p style="margin-top:12px; color:var(--text-muted); font-size:0.85rem;">* Handcrafted in Musanze with custom delivery to your venue.</p>
+      </div>
+
+      <div class="customizer-form">
+        <div class="form-group">
+          <label class="form-label">Number of Tiers</label>
+          <select class="form-select" id="tierSelect" onchange="calculateCakePrice()">
+            <option value="1">1-Tier Cake (Serves 20–30) — 45,000 RWF</option>
+            <option value="2">2-Tier Cake (Serves 50–70) — 85,000 RWF</option>
+            <option value="3" selected>3-Tier Cake (Serves 90–120) — 140,000 RWF</option>
+            <option value="4">4-Tier Grand Cake (Serves 150–200) — 210,000 RWF</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Primary Cake Flavor</label>
+          <select class="form-select" id="flavorSelect">
+            <option>Vanilla Bean Buttercream</option>
+            <option>Belgian Chocolate Ganache</option>
+            <option>Red Velvet & Cream Cheese</option>
+            <option>Passionfruit & Mango Twist</option>
+            <option>Marble Chocolate Vanilla</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Design & Frosting Style</label>
+          <select class="form-select" id="styleSelect">
+            <option>Royal Gold Leaf & Roses</option>
+            <option>Minimalist Semi-Naked Floral</option>
+            <option>Classic White Fondant & Pearls</option>
+            <option>Textured Gold Drip & Berries</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Wedding Date & Venue Location</label>
+          <input type="text" class="form-input" id="weddingDetails" placeholder="e.g. Oct 15th, Fatima Hotel Musanze">
+        </div>
+
+        <div class="price-estimate" id="cakePriceDisplay">
+          Estimated Price: 140,000 RWF
+        </div>
+
+        <button class="btn btn-yellow" style="width: 100%; justify-content: center; padding: 14px;" onclick="sendWeddingQuote()">
+          💬 Request WhatsApp Quote & Booking
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Craftsmanship / Our Story -->
+  <section class="section" id="story">
+    <div class="story-grid">
+      <div class="story-text">
+        <span class="section-subtitle">OUR CRAFTSMANSHIP</span>
+        <h2 class="section-title" style="margin-bottom: 20px;">Baking in Musanze with Passion</h2>
+        <p>At <strong>Yummy Snacks</strong>, we believe every celebration deserves the unmatched warmth of homemade baking. Located right in Musanze behind Energy Radio, our bakery blends traditional Rwandan hospitality with modern culinary art.</p>
+        <p>Whether you're organizing a wedding at a local hotel, ordering daily breakfast mandazi for your family, or arranging catering platters for your company, we use only fresh, premium local ingredients.</p>
+
+        <div class="story-highlights">
+          <div class="highlight-item">
+            <h4>📍 Musanze Location</h4>
+            <p style="font-size:0.85rem; margin:0;">Inyuma ya Energy Radio</p>
+          </div>
+          <div class="highlight-item">
+            <h4>⏰ Daily Baking</h4>
+            <p style="font-size:0.85rem; margin:0;">Fresh every morning at 7 AM</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="story-img-container">
+        <img src="assets/baker_craft_1788261990529.png" alt="Yummy Snacks Bakery Craft">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Location Banner -->
+  <section class="section" id="contact">
+    <div class="contact-banner">
+      <div>
+        <span class="section-subtitle">VISIT OR CALL US</span>
+        <h2 class="section-title" style="margin-bottom: 16px;">We're Ready for Your Order</h2>
+        <p style="color: var(--text-secondary);">Stop by our bakery in Musanze or place an instant order over WhatsApp for home or venue delivery.</p>
+
+        <ul class="contact-info-list">
+          <li><span class="contact-icon">📍</span> <strong>Address:</strong> Musanze — Inyuma ya Energy Radio</li>
+          <li><span class="contact-icon">📞</span> <strong>Phone 1:</strong> <a href="tel:0792194867" style="color:var(--yellow-primary);">0792194867</a></li>
+          <li><span class="contact-icon">📞</span> <strong>Phone 2:</strong> <a href="tel:0782464751" style="color:var(--yellow-primary);">0782464751</a></li>
+          <li><span class="contact-icon">⏰</span> <strong>Hours:</strong> Mon–Sat: 7:00 AM – 8:00 PM | Sun: 9:00 AM – 5:00 PM</li>
+        </ul>
+      </div>
+
+      <div style="display: flex; flex-direction: column; justify-content: center; gap: 20px;">
+        <a href="https://wa.me/250792194867?text=Hello%20Yummy%20Snacks!%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="btn btn-yellow" style="padding: 16px; justify-content: center; font-size: 1.05rem;">
+          💬 Chat on WhatsApp (0792194867)
+        </a>
+        <a href="tel:0782464751" class="btn btn-outline" style="padding: 16px; justify-content: center; font-size: 1.05rem;">
+          📞 Direct Phone Call (0782464751)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>YUMMY SNACKS</h4>
+        <p style="color:#CCCCCC; font-size:0.9rem;">Homemade Goodness baked daily in Musanze. Specializing in custom Wedding Cakes, celebration pastries, fresh mandazi & sambusa.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Product Menu</a></li>
+          <li><a href="#customizer">Wedding Cake Builder</a></li>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Musanze</h4>
+        <p style="color:#CCCCCC; font-size:0.9rem; margin-bottom: 8px;">Inyuma ya Energy Radio, Musanze, Northern Province, Rwanda</p>
+        <p style="color:var(--yellow-primary); font-weight:700;">0792194867 / 0782464751</p>
+      </div>
+    </div>
+
+    <div class="copyright">
+      &copy; 2026 YUMMY SNACKS - Homemade Goodness. All rights reserved. Musanze, Rwanda.
+    </div>
+  </footer>
+
+  <!-- Slide-out Cart Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay" onclick="toggleCart()">
+    <div class="drawer" onclick="event.stopPropagation()">
+      <div class="drawer-header">
+        <h3 class="drawer-title">Your Order Bag</h3>
+        <button class="close-drawer" onclick="toggleCart()">&times;</button>
+      </div>
+
+      <div class="cart-items" id="cartItemsList">
+        <p style="color: var(--text-muted); text-align: center; margin-top: 40px;">Your bag is currently empty.</p>
+      </div>
+
+      <div style="border-top: 1px solid var(--border-color); padding-top: 16px;">
+        <div style="display: flex; justify-content: space-between; font-size: 1.2rem; font-weight: 800; color: var(--yellow-primary); margin-bottom: 16px;">
+          <span>Total:</span>
+          <span id="cartTotal">0 RWF</span>
+        </div>
+        <button class="btn btn-yellow" style="width: 100%; justify-content: center; padding: 14px;" onclick="checkoutWhatsApp()">
+          📲 Send Order via WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
